@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         date_of_immat: {
-            type: DataTypes.DATE,
+            type: DataTypes.STRING(50),
             unique: false,
             allowNull: false
         },
@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
             unique: false,
             allowNull: false
         },
-        modelid: {
+        id_brands: {
             type: DataTypes.INTEGER,
             unique: false,
             allowNull: false

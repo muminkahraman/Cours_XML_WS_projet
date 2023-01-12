@@ -1,7 +1,7 @@
 // Model
 module.exports = (sequelize, DataTypes) => {
     const Purshase = sequelize.define('Purshase', {
-        id_models: {
+        id_purshase: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
@@ -13,6 +13,16 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         id_brand: {
+            type: DataTypes.INTEGER,
+            unique: false,
+            allowNull: false
+        },
+        id_users: {
+            type: DataTypes.INTEGER,
+            unique: false,
+            allowNull: false
+        },
+        id_vehicle: {
             type: DataTypes.INTEGER,
             unique: false,
             allowNull: false

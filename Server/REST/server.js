@@ -56,7 +56,7 @@ require('./routes/routes.js')(app);
 //     });
 // });
 
-app.get('/', auth,(req, res) => {
+app.get('/',(req, res) => {
     res.send({
         message: "Hello World"
     });
