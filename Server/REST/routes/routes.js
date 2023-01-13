@@ -1,6 +1,7 @@
 const AuthController = require("../controllers/Authcontroller.js");
 const VehiclesController = require("../controllers/VehiclesController.js");
 const PurshaseController = require("../controllers/PurshaseController.js");
+const ApiCarsController = require("../controllers/ApiCarsController.js");
 const verifyToken = require("../middleware/auth.js");
 
 module.exports = (app) => {
@@ -24,4 +25,5 @@ module.exports = (app) => {
     app.put("/purshase/:id",verifyToken,PurshaseController.updatePurshase);
     app.delete("/purshase/:id",verifyToken,PurshaseController.deletePurshase);
 
+    app.get("/api-cars",ApiCarsController.getCars);
 }  
