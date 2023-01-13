@@ -56,7 +56,8 @@ module.exports = {
                     last_name: userJson.last_name,
                     date_of_birth: userJson.date_of_birth,
                     mail_address: userJson.mail_address,
-                    token: token
+                    token: token,
+                    message: "Inscription valide"
                 })
             }
             else{
@@ -75,6 +76,9 @@ module.exports = {
     async login(req,res){
         try{
             const {email,password} = req.body
+            console.log("emial : ",email);
+            console.log("password : ",password);
+
             const user = await Users.findOne({
                 where:{
                     mail_address: email,
